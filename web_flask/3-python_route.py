@@ -21,13 +21,13 @@ def diplay():
 def dplay(text):
     """Return string when route queried
     """
-    return 'C' + text.replace('_', ' ')
+    return 'C ' + text.replace('_', ' ')
 
 @app.route('/python/<text>')
 def dlay(text = 'is cool'):
     """Return string when route queried
     """
-    return 'Python' + text.replace('_', ' ')
+    return 'Python ' + text.replace('_', ' ')
 
 if __name__ == '__main__':
     app.url_map.strict_slashes = False
