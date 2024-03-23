@@ -17,14 +17,11 @@ def diplay():
     """
     return '“HBNB”'
 
-@app.route('/c')
+@app.route('/c/<text>')
 def dplay():
     """Return string when route queried
     """
-    text = input()
-    for i in text:
-        '_' == ' '
-    return f'C {text}'
+    return 'C' + text.replace('_',' ')
 
 if __name__ == '__main__':
     app.url_map.strict_slashes = False
