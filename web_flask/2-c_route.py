@@ -1,17 +1,26 @@
+#!/usr/bin/python3
+"""Start web application with multiple routings
+"""
 from flask import Flask
 
 app = Flask(__name__)
 
 @app.route('/')
-def display():
+def  display():
+    """Return string when route queried
+    """
     return '“Hello HBNB!”'
 
 @app.route('/hbnb')
 def diplay():
+    """Return string when route queried
+    """
     return '“HBNB”'
 
 @app.route('/c')
 def dplay():
+    """Return string when route queried
+    """
     text = input()
     for i in text:
         '_' == ' '
