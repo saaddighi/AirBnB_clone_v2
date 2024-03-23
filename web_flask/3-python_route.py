@@ -4,7 +4,6 @@
 from flask import Flask
 
 app = Flask(__name__)
-text = 'is cool'
 
 @app.route('/')
 def  display():
@@ -25,7 +24,7 @@ def dplay():
     return 'C' + text.replace('_', ' ')
 
 @app.route('/python/<text>')
-def dlay():
+def dlay(text = 'is cool'):
     """Return string when route queried
     """
     return 'Python' + text.replace('_', ' ')
