@@ -5,31 +5,30 @@
 from flask import Flask
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/", strict_slashes=False)
 def  display():
     """Return string when route queried
     """
     return 'Hello HBNB!'
 
-@app.route("/hbnb")
+@app.route("/hbnb", strict_slashes=False)
 def diplay():
     """Return string when route queried
     """
     return 'HBNB'
 
-@app.route("/c/<text>")
+@app.route("/c/<text>", strict_slashes=False)
 def dplay(text):
     """Return string when route queried
     """
     return 'C ' + text.replace('_', ' ')
 
-@app.route("/python/")
-@app.route("/python/<text>")
+@app.route("/python/", strict_slashes=False)
+@app.route("/python/<text>", strict_slashes=False)
 def dlay(text= "is cool"):
     """Return string when route queried
     """
     return 'Python ' + text.replace('_', ' ')
 
 if __name__ == "__main__":
-    app.url_map.strict_slashes = False
     app.run(host='0.0.0.0', port=5000)
