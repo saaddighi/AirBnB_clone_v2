@@ -18,7 +18,7 @@ def diplay():
     return '“HBNB”'
 
 @app.route('/c/<text>')
-def dplay():
+def dplay(text):
     """Return string when route queried
     """
     return 'C ' + text.replace('_',' ')
