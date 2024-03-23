@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Start web application with multiple routings
 """
+
 from flask import Flask
 app = Flask(__name__)
 
