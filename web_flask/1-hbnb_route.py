@@ -15,7 +15,7 @@ def display():
     return '“Hello HBNB!”'
 
 @app.route('/hbnb')
-def display():
+def diplay():
     """Return string when route queried
     """
     return '“HBNB”'
