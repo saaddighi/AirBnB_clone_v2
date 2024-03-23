@@ -2,20 +2,19 @@
 """Start web application with multiple routings
 """
 from flask import Flask
-
 app = Flask(__name__)
 
 @app.route('/')
 def  display():
     """Return string when route queried
     """
-    return '“Hello HBNB!”'
+    return 'Hello HBNB!'
 
 @app.route('/hbnb')
 def diplay():
     """Return string when route queried
     """
-    return '“HBNB”'
+    return 'HBNB'
 
 @app.route('/c/<text>')
 def dplay(text):
