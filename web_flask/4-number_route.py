@@ -38,9 +38,8 @@ def dlay(text="is cool"):
 @app.route('/number', strict_slashes=False)
 @app.route('/number/<n>', strict_slashes=False)
 def dpl(n):
-    if type(n) == int():
+    if type(n) == type(1):
         return "n is a number"
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
- 
