@@ -5,11 +5,13 @@
 from flask import Flask
 app = Flask(__name__)
 
+
 @app.route("/", strict_slashes=False)
-def  display():
+def display():
     """Return string when route queried
     """
     return 'Hello HBNB!'
+
 
 @app.route("/hbnb", strict_slashes=False)
 def diplay():
@@ -17,15 +19,17 @@ def diplay():
     """
     return 'HBNB'
 
+
 @app.route("/c/<text>", strict_slashes=False)
 def dplay(text):
     """Return string when route queried
     """
     return 'C ' + text.replace('_', ' ')
 
+
 @app.route("/python/", strict_slashes=False)
 @app.route("/python/<text>", strict_slashes=False)
-def dlay(text= "is cool"):
+def dlay(text = "is cool"):
     """Return string when route queried
     """
     return 'Python ' + text.replace('_', ' ')
