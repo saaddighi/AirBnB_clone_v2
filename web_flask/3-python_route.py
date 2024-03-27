@@ -29,7 +29,7 @@ def dplay(text):
 
 @app.route("/python/", strict_slashes=False)
 @app.route("/python/<text>", strict_slashes=False)
-def dlay(text = "is cool"):
+def dlay(text="is cool"):
     """Return string when route queried
     """
     return 'Python ' + text.replace('_', ' ')
